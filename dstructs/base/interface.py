@@ -16,5 +16,10 @@ class BaseStructure(ABC, Generic[T]) :
     
     @abstractmethod
     def insert(self, item : T, index : Optional[int] = -1) -> None : 
-        """Insert the item at the end of the list"""
+        """Insert the item at the specified index of the list"""
         pass 
+
+    @abstractmethod
+    def remove(self, item : T) -> bool : 
+        """Remove the item from the structure."""
+        pass
